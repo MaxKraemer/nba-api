@@ -5,7 +5,7 @@
     <div class="nba-teams__content" >
       <div class="nba-teams__list">
         <div class="nba-teams__item">
-          <div class="nba-teams__item__logo" (click)="openDialog(team)">
+          <div class="nba-teams__item__logo" (click)="openDialog(teams.response[19].id)">
             <img [src]="teams.response[19].logo" [alt]="" />
           </div>
           <div class="input-text">
@@ -14,7 +14,7 @@
             {{team}}
         </div>
         <div class="nba-teams__item">
-          <div class="nba-teams__item__logo">
+          <div class="nba-teams__item__logo" (click)="openDialog(teams.response[0].id)">
             <img [src]="teams.response[0].logo" [alt]="" />
           </div>
           <div class="nba-teams__item__name">
@@ -22,7 +22,7 @@
           </div>
         </div>
         <div class="nba-teams__item">
-          <div class="nba-teams__item__logo">
+          <div class="nba-teams__item__logo" (click)="openDialog(teams.response[23].id)">
             <img [src]="teams.response[23].logo" [alt]="" />
           </div>
           <div class="nba-teams__item__name">

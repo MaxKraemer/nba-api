@@ -30,13 +30,13 @@ export class NbaAreaComponent {
     });
   }
 
-  openDialog(team: string) {
+  openDialog(teamId: string): void {
+    const team = this.teams.response.find((team: any) => team.id === teamId);
+    console.log(team, 'team');
     this.dialog.open(NbaTeamDetailsComponent, {
       height: '400px',
       width: '600px',
-      data: {
-        team: team
-      }
-    })
-   }
+      data: { team }
+    });
+  }
 }

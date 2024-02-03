@@ -1,0 +1,76 @@
+<div class="nba-teams">
+    <div class="nba-teams__header">
+      <h1 class="nba-teams__title">NBA Teams</h1>
+    </div>
+    <div class="nba-teams__content" >
+      <div class="nba-teams__list">
+        <div class="nba-teams__item">
+          <div class="nba-teams__item__logo" (click)="openDialog(team)">
+            <img [src]="teams.response[19].logo" [alt]="" />
+          </div>
+          <div class="input-text">
+            {{ teams.response[19].name }}
+          </div>
+            {{team}}
+        </div>
+        <div class="nba-teams__item">
+          <div class="nba-teams__item__logo">
+            <img [src]="teams.response[0].logo" [alt]="" />
+          </div>
+          <div class="nba-teams__item__name">
+            {{ teams.response[0].name }}
+          </div>
+        </div>
+        <div class="nba-teams__item">
+          <div class="nba-teams__item__logo">
+            <img [src]="teams.response[23].logo" [alt]="" />
+          </div>
+          <div class="nba-teams__item__name">
+            {{ teams.response[23].name }}
+          </div>
+        </div>
+        <div class="nba-teams__item">
+          <div class="nba-teams__item__logo">
+            <img [src]="teams.response[7].logo" [alt]="" />
+          </div>
+          <div class="nba-teams__item__name">
+            {{ teams.response[7].name }}
+          </div>
+        </div>
+        <div class="nba-teams__item">
+          <div class="nba-teams__item__logo">
+            <img [src]="teams.response[4].logo" [alt]="" />
+          </div>
+          <div class="nba-teams__item__name">
+            {{ teams.response[4].name }}
+          </div>
+        </div>
+        <div class="nba-teams__item">
+          <div class="nba-teams__item__logo">
+            <img [src]="teams.response[21].logo" [alt]="" />
+          </div>
+          <div class="nba-teams__item__name">
+            {{ teams.response[21].name }}
+          </div>
+        </div>
+        <div class="nba-teams__item">
+          <div class="nba-teams__item__logo">
+            <img [src]="teams.response[25].logo" [alt]="" />
+          </div>
+          <div class="nba-teams__item__name">
+            {{ teams.response[25].name }}
+          </div>
+        </div>
+        <div class="nba-teams__item">
+          <div class="nba-teams__item__logo">
+            <img [src]="teams.response[15].logo" [alt]="" />
+          </div>
+          <div class="nba-teams__item__name">
+            {{ teams.response[15].name }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

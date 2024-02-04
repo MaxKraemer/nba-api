@@ -1,3 +1,5 @@
+<app-nba-header></app-nba-header>
+
 <div class="nba-teams">
     <div class="nba-teams__header">
       <h1 class="nba-teams__title">NBA Teams</h1>
@@ -11,14 +13,19 @@
           <div class="input-text">
             {{ teams.response[19].name }}
           </div>
-            {{team}}
+            {{text}}
+        </div>
+        <div class="data"  *ngFor="let data of data$ | async"> 
+          <ul>
+            <li>{{ data }}</li>
+          </ul>
         </div>
         <div class="nba-teams__item">
-          <div class="nba-teams__item__logo" (click)="openDialog(teams.response[0].id)">
-            <img [src]="teams.response[0].logo" [alt]="" />
+          <div class="nba-teams__item__logo" (click)="openDialog(teams.response[7].id)">
+            <img [src]="teams.response[7].logo" [alt]="" />
           </div>
           <div class="nba-teams__item__name">
-            {{ teams.response[0].name }}
+            {{ teams.response[7].name }}
           </div>
         </div>
         <div class="nba-teams__item">
@@ -29,48 +36,19 @@
             {{ teams.response[23].name }}
           </div>
         </div>
-        <div class="nba-teams__item">
-          <div class="nba-teams__item__logo">
-            <img [src]="teams.response[7].logo" [alt]="" />
-          </div>
-          <div class="nba-teams__item__name">
-            {{ teams.response[7].name }}
-          </div>
-        </div>
-        <div class="nba-teams__item">
-          <div class="nba-teams__item__logo">
-            <img [src]="teams.response[4].logo" [alt]="" />
-          </div>
-          <div class="nba-teams__item__name">
-            {{ teams.response[4].name }}
-          </div>
-        </div>
-        <div class="nba-teams__item">
-          <div class="nba-teams__item__logo">
-            <img [src]="teams.response[21].logo" [alt]="" />
-          </div>
-          <div class="nba-teams__item__name">
-            {{ teams.response[21].name }}
-          </div>
-        </div>
-        <div class="nba-teams__item">
-          <div class="nba-teams__item__logo">
-            <img [src]="teams.response[25].logo" [alt]="" />
-          </div>
-          <div class="nba-teams__item__name">
-            {{ teams.response[25].name }}
-          </div>
-        </div>
-        <div class="nba-teams__item">
-          <div class="nba-teams__item__logo">
-            <img [src]="teams.response[15].logo" [alt]="" />
-          </div>
-          <div class="nba-teams__item__name">
-            {{ teams.response[15].name }}
-          </div>
-        </div>
       </div>
     </div>
+  </div>
+
+  <div class="nba-form">
+    <form [formGroup]="profileForm">
+      <label for="fname">First name:</label><br>
+      <input formControlName="firstName" type="text" id="fname" name="fname"><br>
+      <label for="fname">Last Name:</label><br>
+      <input formControlName="lastName"  type="text" id="fname" name="fname"><br>
+      <label for="fname">Address:</label><br>
+      <input formControlName="address" type="text" id="fname" name="fname"><br>
+    </form>
   </div>
   
   

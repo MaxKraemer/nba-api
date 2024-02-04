@@ -20,3 +20,15 @@ img {
     padding-top: 40px;
     padding-bottom: 20px;
 }
+
+.nba-form {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}

@@ -15,8 +15,8 @@ import { NbaAreaComponent } from './nba-section/nba-area/nba-area.component';
 export class AppComponent {
   constructor() { }
   
-  posts = [
-    'Hallo NBA',
+  text = [
+    'The Miami Heat are an American professional basketball team based in Miami. The Heat compete in the National Basketball Association (NBA) as a member of the Southeast Division of the Eastern Conference. The club plays its home games at Kaseya Center, and has won three NBA championships.',
   ]
 
 }

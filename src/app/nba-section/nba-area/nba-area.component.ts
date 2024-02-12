@@ -28,11 +28,12 @@ export class NbaAreaComponent implements OnInit{
               public dataService: DataService) { }
 
   public teams: any;
+  public showteams: any[] = [];
 
   data$: Observable<string[]> | undefined;
 
 
-  @Input() text: any = '';
+  @Input() teamText: any = '';
 
   ngOnInit() {
     this.getData();
@@ -44,6 +45,9 @@ export class NbaAreaComponent implements OnInit{
   getData() {
     this.apiService.getSeasonsData().subscribe((data) => {
       this.teams = data;
+      this.showteams.push(this.teams.response.filter((team: any) => team.name.includes('Miami'))[0]);
+      this.showteams.push(this.teams.response.filter((team: any) => team.name.includes('Dallas'))[0]);
+      this.showteams.push(this.teams.response.filter((team: any) => team.name.includes('New York'))[0]);
       console.log(this.teams, 'teams');
     });
   }
